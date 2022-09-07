@@ -5,8 +5,8 @@ const instance = axios.create({
 })
 
 export const api = {
-    getAllPokemon() {
-        return instance.get('/pokemon')
+    getAllPokemon(limit: number) {
+        return instance.get(`/pokemon?limit=${limit}`)
     },
     getCurrent() {
         return instance.get('/pokemon')
